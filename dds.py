@@ -97,7 +97,7 @@ def attack_load(threads):
     while any(thread.is_alive() for thread in threads):
         total_packets_sent = sum(thread.packets_sent for thread in threads)
 
-        show_ascii_header()
+        # show_ascii_header()
 
         print("Total Packets sent: %d" % total_packets_sent, end="\r")
         time.sleep(0.1)
