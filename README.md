@@ -9,8 +9,6 @@
 
 - Launch DDoS attacks against a target IP and port using multiple threads.
 - Customizable number of threads and packets to send.
-- ASCII art header for added visual appeal.
-- Uses random payload data to simulate real network traffic.
 - Provides feedback on the total number of packets sent.
 
 ## Prerequisites
